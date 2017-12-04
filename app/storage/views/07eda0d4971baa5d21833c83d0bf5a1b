@@ -1,0 +1,33 @@
+
+<?php $__env->startSection('header1'); ?>
+    <h1>Simple CRUDL - Laravel - Create</h1>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?> 
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h4>Create user</h4>
+    </div>
+
+    <div class="panel-body">
+        <form method="post" action="store">
+            <p>
+                <input type="text" name="name" placeholder="Name" class="form-control" required>
+            </p>
+            <p>
+                <input type="text" name="twitter" placeholder="Twitter" class="form-control" required>
+            </p>
+            <p>
+                <input type="submit" value="Save" class="btn btn-success">
+            </p>
+        </form>
+    </div>
+</div>
+
+
+<div class="alert alert-<?php echo Session::get('class'); ?>"><?php echo Session::get('message'); ?></div>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

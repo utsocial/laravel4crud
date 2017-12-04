@@ -1,0 +1,38 @@
+
+<?php $__env->startSection('header1'); ?>
+    <h1>Simple CRUDL - Laravel - Edit</h1>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?> 
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h4>Edit user</h4>
+    </div>
+
+    <div class="panel-body">
+        <?php if (!empty($user)): ?>
+        <form method="post" action="/users/update/<?php echo $user->id; ?>">
+            <p>
+                <input value="<?php echo $user->name; ?>" type="text" name="name" placeholder="Nombre" class="form-control" required>
+            </p>
+            <p>
+                <input value="<?php echo $user->twitter; ?>" type="text" name="twitter" placeholder="Twitter" class="form-control" required>
+            </p>
+            <input type="submit" value="Save" class="btn btn-success">
+            <?php else: ?>
+            <p>
+                There is not information for this user.
+            </p>
+            <?php endif; ?>
+            <a href="/users" class="btn btn-default">Back</a>
+        </form>
+    </div>
+</div>
+
+
+<div class="alert alert-<?php echo Session::get('class'); ?>"><?php echo Session::get('message'); ?></div>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
