@@ -4,16 +4,16 @@ How to use Laravel 4 for a CRUD
 
 ## Effort to use the good pratice
 
-Run in local with:
+## Run in local with:
 10.0.1.95
 Read Vagrantfile
 
-Run in the C9.io
+## Run in the C9.io
 Edit the file:
 /etc/apache2/sites-enabled/001-cloud9.conf
 DocumentRoot /home/ubuntu/workspace/public
 ...
-Run in codeenvy
+## Run in codeenvy
 Edit the file
 vim /etc/apache2/sites-enabled/000-default.conf
 -----------------------------
