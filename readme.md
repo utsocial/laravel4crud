@@ -1,8 +1,11 @@
-## CRUD en Laravel 4
+## CRUD with Laravel 4
 
 How to use Laravel 4 for a CRUD
 
 ## Effort to use the good pratice
+* Using repository pattern in laravel
+* Using TDD
+* 
 
 ## Run in local with:
 10.0.1.95
